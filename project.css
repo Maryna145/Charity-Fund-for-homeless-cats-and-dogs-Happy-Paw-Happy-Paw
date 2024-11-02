@@ -655,7 +655,7 @@ span {
 }
 .btndonfoot {
   width: 127.46px;
-  height: 58px;
+  height: 58px ;
   border: none;
   border-radius: 70px;
   background: linear-gradient(to right, #6562ff 0%, #00fbb0 100%);
@@ -663,11 +663,11 @@ span {
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 4px 10px;
   text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: 700;
+
 }
 
 .nav-foot {
@@ -682,9 +682,7 @@ span {
   height: auto;
   margin: 0 22.5px 17px;
 }
-.btndonfoot {
-  width: 240px;
-}
+
 .footer-a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -692,7 +690,6 @@ span {
   height: auto;
   padding: 0;
   align-items: center;
-  margin-left: 110px;
 }
 .foot-a {
   width: 276.99px;
@@ -737,53 +734,58 @@ h5 a {
   height: 24px;
   margin-right: 20px;
 }
-.center {
-  display: flex;
-  justify-content: space-between;
+.copyright {
   width: 100%;
-  height: 135px;
-  margin: 0 auto;
-  padding: 37px 175px;
-  box-sizing: border-box;
-}
-.copyright-text {
-  color: #421f10;
-  font-size: 1rem;
-}
-.copyright-email {
-  text-decoration: none;
-  color: #421f10;
-  transition: color 0.15s ease-in-out;
-}
-.link-copy {
-  text-decoration: none;
-  color: #421f10;
-  transition: color 0.15s ease-in-out;
-}
-.copyright-email:hover {
-  color: #683e2c;
-}
-.link-copy:hover {
-  color: #555555;
-}
-.copyright-diya {
-  font-size: 0.625rem;
-  color: #421f10;
-  line-height: 19px;
-}
-.copyright-company-logo {
-  background-image: url(./img/logo_diya.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 91px;
-  height: 42px;
-  margin: 0 0.25rem;
+  text-align: center;
 }
 
+.center {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #333;
+  padding: 11px 56px;
+  margin: 0;
+}
+
+.link-copy, .copyright-email {
+  color: #421f10;
+  text-decoration: none;
+}
+
+.link-copy:hover{
+  color:#555555 ;
+}.copyright-email:hover {
+  color: #937669;
+}
+
+.copyright-diya {
+  background-color: #f0f0f0;
+}
+
+.copyright-company-logo a {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: url(./img/logo_diya.png) no-repeat center center;
+  background-size: contain;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
 @media screen and (max-width: 600px) {
   .nav1 {
     display: none;
   }
+
   .top2 {
     display: flex;
     align-items: center;
@@ -811,12 +813,14 @@ h5 a {
     display: none;
   }
   .button-div {
-    width: 360px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    margin-top: 80px;
+    margin: 80px 0 10px 180px;
+  }
+  .nav{
+    margin: 0;
   }
   .btn-mobile {
     width: 127.46px;
@@ -847,7 +851,8 @@ h5 a {
     cursor: pointer;
     position: absolute;
     top: 25px;
-    right: 65px;
+    padding: 4px 12px;
+    margin: 0 51px 27px 0;
     z-index: 1;
   }
 
@@ -960,7 +965,7 @@ h5 a {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-
+    justify-content: center;
     padding: 27px 0;
   }
 
@@ -970,11 +975,13 @@ h5 a {
   }
 
   .footer-a {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 36px;
   }
   .foot-a {
     width: 100%;
@@ -990,10 +997,13 @@ h5 a {
     margin-top: 10px;
   }
   h5 {
-    margin: 25px 0 10px;
+    margin: 5px 0 10px;
   }
   h5 a {
     line-height: 30px;
+  }
+  .p-footer{
+    margin: 15px 10px;
   }
   .p-footer a {
     line-height: 30px;
@@ -1005,14 +1015,44 @@ h5 a {
     margin: 0 10px;
   }
   .center {
-    flex-direction: column;
     height: 98px;
   }
   .copyright-text {
     font-size: 14px;
     text-align: center;
     padding-top: 10px;
-    margin: 5px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+
+  .copyright-diya {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    background-color: #f0f0f0;
+    line-height: 30px;
+    text-align: center;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright-company-logo a{
+    width: 46px;
+    height: 21px;
+    margin: 0 0.25rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .center {
+    width: 100%;
+    flex-direction: column;
+    height: 98px;
+  }
+  .copyright-text {
+    font-size: 14px;
+    text-align: center;
+    padding:11px 56px;
   }
 
   .copyright-diya {
@@ -1028,12 +1068,11 @@ h5 a {
     align-items: center;
   }
   .copyright-company-logo {
-    width: 50px;
-    height: 20px;
+    width: 46px;
+    height: 21px;
     margin: 0 0.25rem;
   }
 }
-
 @media screen and (max-width: 960px) {
   .nav1,
   .nav2 {
@@ -1042,9 +1081,7 @@ h5 a {
   .logo-top {
     margin-left: 22px;
   }
-  .nav {
-    margin-left: 252px;
-  }
+
   .menu {
     display: block;
     background-image: url(./img/menu.png);
