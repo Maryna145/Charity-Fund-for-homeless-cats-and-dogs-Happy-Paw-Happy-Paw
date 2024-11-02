@@ -60,32 +60,33 @@ body {
 
 .dropdown-content {
   display: none;
-  position: fixed;
-  background-color: #ffd816;
+  position: absolute; 
+  left: 75%; 
+  top: 0;
+  background-color: #ffd816 ;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   min-width: 80px;
   padding: 10px;
   z-index: 102 !important;
   text-align: center;
 }
-
 .dropdown-content a {
   color: #421f10;
   text-decoration: none;
   display: block;
   text-transform: uppercase;
   z-index: 102;
+  background-color: #ffd816;
 }
-
-.dropdown-content a:hover {
-  background-color: #fbe36e;
-  z-index: 102;
-}
-
-.dropdown:hover .dropdown-content {
-  background-color: #fbe36e;
+.dropdown:hover .dropdown-content{
   display: block;
-  z-index: 102;
+}
+.dropdown-content:hover {
+  background-color: #fbe36e;
+  cursor: pointer;
+}
+.dropdown-content:hover a{
+  background-color: #fbe36e;
 }
 .mainph {
   background-image: url("./img/Article.png");
