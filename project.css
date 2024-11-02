@@ -650,12 +650,11 @@ span {
   height: 388px;
   padding: 40px 120px;
   display: flex;
-  line-height: 1.1;
   margin: 0 auto;
 }
 .btndonfoot {
-  width: 127.46px;
-  height: 58px ;
+  width: 240px;
+  height: 58px;
   border: none;
   border-radius: 70px;
   background: linear-gradient(to right, #6562ff 0%, #00fbb0 100%);
@@ -667,7 +666,6 @@ span {
   color: white;
   font-size: 18px;
   font-weight: 700;
-
 }
 
 .nav-foot {
@@ -690,6 +688,7 @@ span {
   height: auto;
   padding: 0;
   align-items: center;
+  margin-left: 100px;
 }
 .foot-a {
   width: 276.99px;
@@ -736,51 +735,45 @@ h5 a {
 }
 .copyright {
   width: 100%;
-  text-align: center;
 }
 
 .center {
-  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 37px 175px;
+  margin: 0 39.6px;
 }
 
 .copyright-text {
-  font-size: 12px;
+  font-size: 16px;
   color: #333;
   padding: 11px 56px;
   margin: 0;
 }
 
-.link-copy, .copyright-email {
+.link-copy,
+.copyright-email {
   color: #421f10;
   text-decoration: none;
 }
 
-.link-copy:hover{
-  color:#555555 ;
-}.copyright-email:hover {
-  color: #937669;
+.link-copy:hover {
+  color: #555555;
 }
-
-.copyright-diya {
-  background-color: #f0f0f0;
+.copyright-email:hover {
+  color: #937669;
 }
 
 .copyright-company-logo a {
   display: inline-block;
-  width: 100px;
-  height: 50px;
+  width: 91px;
+  height: 42px;
   background: url(./img/logo_diya.png) no-repeat center center;
   background-size: contain;
 }
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
+
 @media screen and (max-width: 600px) {
   .nav1 {
     display: none;
@@ -819,7 +812,7 @@ p {
     align-items: center;
     margin: 80px 0 10px 180px;
   }
-  .nav{
+  .nav {
     margin: 0;
   }
   .btn-mobile {
@@ -857,7 +850,7 @@ p {
   }
 
   .mainph {
-    height: 260px;
+    height: 325px;
     width: 100%;
     background-size: contain;
     margin-top: 185px;
@@ -958,7 +951,9 @@ p {
     height: 36.6px;
     margin-top: 5px;
   }
-
+  .btndonfoot {
+    width: 127.46;
+  }
   .footer {
     height: auto;
     display: flex;
@@ -1002,7 +997,7 @@ p {
   h5 a {
     line-height: 30px;
   }
-  .p-footer{
+  .p-footer {
     margin: 15px 10px;
   }
   .p-footer a {
@@ -1018,9 +1013,9 @@ p {
     height: 98px;
   }
   .copyright-text {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
-    padding-top: 10px;
+    padding: 11px 56px;
     font-weight: 500;
     line-height: 25px;
   }
@@ -1037,7 +1032,7 @@ p {
     justify-content: center;
     align-items: center;
   }
-  .copyright-company-logo a{
+  .copyright-company-logo a {
     width: 46px;
     height: 21px;
     margin: 0 0.25rem;
@@ -1052,7 +1047,7 @@ p {
   .copyright-text {
     font-size: 14px;
     text-align: center;
-    padding:11px 56px;
+    padding: 11px 56px;
   }
 
   .copyright-diya {
