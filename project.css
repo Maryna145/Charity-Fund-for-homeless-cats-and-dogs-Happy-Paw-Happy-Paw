@@ -108,8 +108,12 @@ body {
   list-style: none;
   margin: 8px 10px !important;
   cursor: pointer;
+  
 }
+.btn-mobile:hover{
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
 
+}
 .btndon a {
   text-decoration: none;
   color: white;
@@ -668,7 +672,10 @@ span {
   font-size: 18px;
   font-weight: 700;
 }
+.btndonfoot:hover{
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
 
+}
 .nav-foot {
   display: flex;
   flex-direction: column;
@@ -680,6 +687,7 @@ span {
   max-width: 100%;
   height: auto;
   margin: 0 22.5px 17px;
+  cursor: pointer;
 }
 
 .footer-a {
@@ -716,6 +724,9 @@ h5 a {
   line-height: 25px;
   font-weight: 600;
 }
+h5:hover a{
+  color: #555555;
+}
 .p-footer a {
   text-decoration: none;
   color: #421f10;
@@ -723,6 +734,9 @@ h5 a {
   line-height: 25px;
   margin: 0 0 8px;
   font-weight: 100;
+}
+.p-footer:hover a{
+  color: #555555;
 }
 .lin-foot {
   display: flex;
@@ -732,6 +746,162 @@ h5 a {
   width: 24px;
   height: 24px;
   margin-right: 20px;
+}
+.creation{
+  font-family: "Monrap", sans-serif;;
+  font-size: 12px;
+
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide1 {
+  background: url(./img/Article.png) no-repeat center center;
+  background-size: cover;
+}
+.slide2 {
+  background: url(./img/Artboard\ 1_0.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slide3 {
+  background: url(./img/baner-na-sajtjpg02022023170724_103c8a68c4334a4d68806632f178503b.jpg) no-repeat center center;
+  background-size: cover;
+}
+.slide4 {
+  background: url(./img/Банер\ на\ сайт\ \(Ситий\ старт\).jpg) no-repeat center center;
+  background-size: cover;
+}
+.slide5 {
+  background: url(./img/Банер\ на\ сайт_3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#radio1:checked ~ .slides .slide1,
+#radio2:checked ~ .slides .slide2,
+#radio3:checked ~ .slides .slide3,
+#radio4:checked ~ .slides .slide4,
+#radio5:checked ~ .slides .slide5 {
+  opacity: 1;
+}
+
+.radio-buttons {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, border 0.3s;
+  border: 1px solid rgba(152, 152, 152, 0.3);
+}
+
+.radio-buttons label:hover {
+  transform: scale(1.4);
+}
+
+#radio1:checked ~ .radio-buttons label[for="radio1"],
+#radio2:checked ~ .radio-buttons label[for="radio2"],
+#radio3:checked ~ .radio-buttons label[for="radio3"],
+#radio4:checked ~ .radio-buttons label[for="radio4"],
+#radio5:checked ~ .radio-buttons label[for="radio5"] {
+  background-color: #f4f4f4;
+}
+
+.slider-container input[type="radio"] {
+  display: none;
+}
+
+@keyframes slide-animation {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide1 {
+  animation: slide-animation 25s infinite 0s;
+}
+
+.slide2 {
+  animation: slide-animation 25s infinite 5s;
+}
+
+.slide3 {
+  animation: slide-animation 25s infinite 10s;
+}
+
+.slide4 {
+  animation: slide-animation 25s infinite 15s;
+}
+
+.slide5 {
+  animation: slide-animation 25s infinite 20s;
+}
+
+@keyframes radio-sync {
+  0%, 20% { 
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  20%, 40% { 
+    background-color: rgba(255, 255, 255, 1);
+  }
+  40%, 60% { 
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  60%, 80% { 
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  80%, 100% { 
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.radio-buttons label:nth-child(1) {
+  animation: radio-sync 25s infinite 0s;
+}
+
+.radio-buttons label:nth-child(2) {
+  animation: radio-sync 25s infinite 5s;
+}
+
+.radio-buttons label:nth-child(3) {
+  animation: radio-sync 25s infinite 10s;
+}
+
+.radio-buttons label:nth-child(4) {
+  animation: radio-sync 25s infinite 15s;
+}
+
+.radio-buttons label:nth-child(5) {
+  animation: radio-sync 25s infinite 20s;
 }
 
 @media screen and (min-width: 1300px) {
@@ -860,6 +1030,7 @@ h5 a {
     background-size: contain;
     margin-top: 185px;
   }
+
   .home-about {
     height: 738.8px;
     align-items: center;
@@ -943,6 +1114,7 @@ h5 a {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    
   }
   .partners-img1 {
     margin: 10px 0;
